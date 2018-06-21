@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+    <!-- Required for directRouter directive. -->
+    <include package="Products.ZenUtils.extdirect.zope" file="meta.zcml"/>
+
+    <browser:directRouter
+        name="zendmd_router"
+        for="*"
+        class=".api.ZenDMDRouter"
+        namespace="Zenoss.remote"
+        permission="zenoss.ManageDMD"
+        />
+
+</configure>
